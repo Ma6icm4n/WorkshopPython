@@ -11,6 +11,9 @@ class Engine(object):
     def export(self, in_file, directory_out):
         pass
 
+    def importation(self, directory):
+        pass
+
 
 def get_current():
 

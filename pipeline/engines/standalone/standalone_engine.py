@@ -5,6 +5,8 @@ class StandaloneEngine(engine.Engine):
 
     mayabatch = "C:/Program Files/Autodesk/Maya2020/bin/mayabatch.exe"
     abc_export_script = "C:/Users/Asus/Desktop/WorkshopPython/pipeline/abc/abc_export.py"
+    hython = "C:/Program Files/Side Effects Software/Houdini 18.0.597/bin/hython.exe"
+    houdini_import = "C:/Users/Asus/Desktop/WorkshopPython/pipeline/engines/houdini/houdini_import.py"
 
     def open(self, path):
         if(platform.system() == "Windows"):
@@ -37,3 +39,12 @@ class StandaloneEngine(engine.Engine):
         subprocess.call(maya_export_query, shell=True)
 
         pass
+
+    def importation(self, directory):
+
+        houdini_import_query = [self.hython, self.houdini_import, directory, directory]
+        print(houdini_import_query)
+        subprocess.call(houdini_import_query, shell=True)
+
+        pass
+

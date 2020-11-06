@@ -17,6 +17,7 @@ class MyWindow(QtWidgets.QMainWindow):
         QtCompat.loadUi(ui_path, self)
         self.open_button.clicked.connect(self.open)
         self.export_button.clicked.connect(self.export)
+        self.import_button.clicked.connect(self.importation)
 
     def open(self, path):
         filename = QtWidgets.QFileDialog.getOpenFileName(self, 'Open File', "C:\\Users\\Asus\\Documents")
@@ -34,3 +35,11 @@ class MyWindow(QtWidgets.QMainWindow):
         print("Extracting Namespace in " + in_file + " to " + directory_out)
 
         self.engine_name.export(in_file, directory_out)
+
+    def importation(self):
+        print("starting import Process")
+        search_dir = QtWidgets.QFileDialog.getExistingDirectory(self, "Open Directory", "C:\\Users\\Asus\\Documents")
+        self.import_directory.setText(search_dir)
+        directory = self.import_directory.text()
+
+        self.engine_name.importation(directory)

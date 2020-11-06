@@ -96,16 +96,6 @@
      </rect>
     </property>
     <layout class="QFormLayout" name="formLayout_2">
-     <item row="1" column="0">
-      <widget class="QPushButton" name="export_button">
-       <property name="text">
-        <string>export Alembic</string>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="1">
-      <widget class="QLineEdit" name="name_export"/>
-     </item>
      <item row="0" column="0" colspan="2">
       <spacer name="verticalSpacer_4">
        <property name="orientation">
@@ -118,6 +108,16 @@
         </size>
        </property>
       </spacer>
+     </item>
+     <item row="1" column="0">
+      <widget class="QPushButton" name="export_button">
+       <property name="text">
+        <string>export Alembic</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLineEdit" name="name_export"/>
      </item>
      <item row="2" column="1">
       <spacer name="verticalSpacer_5">
@@ -135,9 +135,6 @@
      <item row="3" column="1">
       <widget class="QLineEdit" name="dir_name"/>
      </item>
-     <item row="5" column="1">
-      <widget class="QLineEdit" name="in_namespace"/>
-     </item>
      <item row="4" column="1">
       <spacer name="verticalSpacer_6">
        <property name="orientation">
@@ -150,6 +147,32 @@
         </size>
        </property>
       </spacer>
+     </item>
+     <item row="5" column="1">
+      <widget class="QLineEdit" name="in_namespace"/>
+     </item>
+     <item row="6" column="1">
+      <spacer name="verticalSpacer_7">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>40</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item row="7" column="1">
+      <widget class="QLineEdit" name="import_directory"/>
+     </item>
+     <item row="7" column="0">
+      <widget class="QPushButton" name="import_button">
+       <property name="text">
+        <string>import</string>
+       </property>
+      </widget>
      </item>
     </layout>
    </widget>
